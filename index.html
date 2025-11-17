@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Shashank Papani - Personal Portfolio</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/images/Website logo.png" type="image/png">
+  <link rel="icon" href="./assets/images/Website logo.png" type="image/png">
 
   <!--
     - custom css link
@@ -39,16 +40,16 @@
 
     <aside class="sidebar" data-sidebar>
 
-      <div class="sidebar-info">
+      <div class="sidebar-info" style="min-height: 150px; padding: 25px 0; align-items: center; justify-content: center; gap: 20px;">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/shashank-paps.jpg" alt="Shashank Sai Papani" width="80">
+        <figure class="avatar-box" style="display: flex; align-items: center; justify-content: center;">
+          <img src="./assets/images/paps.jpg" alt="Shashank Sai Papani" style="border-radius: 20px; width: auto; height: 120px; max-width: 120px; object-fit: contain; display: block;">
         </figure>
 
-        <div class="info-content">
-          <h1 class="name" title="Shashank Sai Papani">Shashank Sai Papani</h1>
+        <div class="info-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+          <h1 class="name" title="Shashank Sai Papani" style="text-align: center;">Shashank Sai Papani</h1>
 
-          <p class="title">Computer Science Student</p>
+          <p class="title" style="margin: 10px auto 0;">Computer Science Student</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -213,7 +214,10 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; cursor: pointer;" data-service-toggle>
+            <h3 class="h3 service-title" style="margin-bottom: 0;">What i'm doing</h3>
+            <ion-icon name="chevron-down" style="font-size: 20px; color: var(--orange-yellow-crayola); transition: transform 0.3s ease;" data-service-icon></ion-icon>
+          </div>
 
           <ul class="service-list">
 
@@ -237,6 +241,26 @@
             <li class="service-item">
 
               <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="software development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software Development</h4>
+
+                <p class="service-item-text">
+                  Building robust and scalable software solutions using modern technologies and best practices.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+          <ul class="service-list service-list-collapsible" data-service-list>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
                 <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
               </div>
 
@@ -253,14 +277,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <img src="./assets/images/icon-dev.svg" alt="machine learning icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title">Machine Learning</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  Developing intelligent systems and AI models to solve complex problems and drive innovation.
                 </p>
               </div>
 
@@ -269,14 +293,30 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="./assets/images/icon-dev.svg" alt="prompt engineering icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">Prompt Engineering</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Crafting effective prompts and optimizing AI interactions to maximize model performance and accuracy.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="app development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">App Development</h4>
+
+                <p class="service-item-text">
+                  Creating cross-platform mobile and desktop applications with modern frameworks and intuitive user experiences.
                 </p>
               </div>
 
@@ -300,10 +340,11 @@
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Zachary" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/Legit Final.png" alt="Legit" width="60" data-testimonials-avatar style="border-radius: 14px; object-fit: cover; width: 60px; height: 60px;">
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Zachary</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Legit</h4>
+                <p style="color: var(--light-gray-70); font-size: var(--fs-7); margin-top: 5px; margin-bottom: 10px;">Zachary</p>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
@@ -314,49 +355,6 @@
               </div>
             </li>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
 
           </ul>
 
@@ -379,7 +377,7 @@
 
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                <img src="./assets/images/Legit Final.png" alt="Legit" width="80" data-modal-img style="border-radius: 18px; object-fit: cover; width: 80px; height: 80px;">
               </figure>
 
               <img src="./assets/images/icon-quote.svg" alt="quote icon">
@@ -387,7 +385,8 @@
 
             <div class="modal-content">
 
-              <h4 class="h3 modal-title" data-modal-title>Zachary</h4>
+              <h4 class="h3 modal-title" data-modal-title>Legit</h4>
+              <p style="color: var(--light-gray-70); font-size: var(--fs-6); margin-top: 5px; margin-bottom: 10px;">Zachary</p>
 
               <time datetime="2024-01-01">2024</time>
 
@@ -415,7 +414,7 @@
           <ul class="clients-list has-scrollbar">
             <li class="clients-item">
               <a href="#">
-                <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--white-2); font-size: var(--fs-4); font-weight: var(--fw-500);">Zachary</div>
+                <img src="./assets/images/Legit Final.png" alt="Legit logo" style="border-radius: 12px; object-fit: contain; max-width: 120px; max-height: 80px; width: auto; height: auto;">
               </a>
             </li>
 
@@ -637,7 +636,7 @@
           <div class="content-card">
             <p class="timeline-text" style="margin-bottom: 15px;">
               <strong>Programming Languages:</strong><br>
-              Frontend: Java FX, HTML, CSS, JavaScript, NodeJS, ReactJS<br>
+              Frontend: HTML, CSS, JavaScript, NodeJS, ReactJS<br>
               Backend: Java, C, C++, Python, C#
             </p>
             <p class="timeline-text" style="margin-bottom: 15px;">
@@ -646,7 +645,7 @@
             </p>
             <p class="timeline-text">
               <strong>Frameworks:</strong><br>
-              Angular, Django, BeautifulSoup, Flask, AWS, Google Cloud, .NET
+              Angular, Django, BeautifulSoup, Flask, AWS, Google Cloud, Postgres, MongoDB, .NET
             </p>
           </div>
 
@@ -882,26 +881,26 @@
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" data-blog-item data-blog-id="toon">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                  <img src="./assets/images/TOON.jpg" alt="TOON for LLMs" loading="lazy" data-blog-img>
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">AI Development</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2024-12-15">Dec 15, 2024</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+                  <h3 class="h3 blog-item-title" data-blog-title>TOON for LLMs Instead of JSON But Better</h3>
 
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  <p class="blog-text" data-blog-text>
+                    JSON works for structured data, but it falls short with large language models. TOON offers a cleaner approach that models parse more reliably and developers find easier to work with.
                   </p>
 
                 </div>
@@ -910,138 +909,26 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" data-blog-item data-blog-id="dbos">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                  <img src="./assets/images/dbos.jpg" alt="DBOS Transact for Java" loading="lazy" data-blog-img>
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Backend Development</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2025-02-14">Feb 14, 2025</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+                  <h3 class="h3 blog-item-title" data-blog-title>Making Java Workflows Durable with DBOS Transact</h3>
 
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  <p class="blog-text" data-blog-text>
+                    DBOS Transact gives Java developers a simple way to build long-running workflows that survive crashes and restarts, using Postgres as the backbone.
                   </p>
 
                 </div>
@@ -1053,9 +940,131 @@
 
         </section>
 
+        <!--
+          - blog modal
+        -->
+
+        <div class="modal-container" data-blog-modal-container>
+
+          <div class="overlay" data-blog-overlay></div>
+
+          <section class="testimonials-modal blog-modal" style="display: flex; flex-direction: column;">
+
+            <button class="modal-close-btn" data-blog-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <figure class="blog-modal-banner" style="width: 100%; height: 300px; border-radius: 12px 12px 0 0; overflow: hidden; margin: -30px -30px 25px -30px; order: -1;">
+              <img src="" alt="" data-blog-modal-img style="width: 100%; height: 100%; object-fit: cover;">
+            </figure>
+
+            <div class="modal-content blog-modal-content" style="max-width: 800px; margin: 0 auto; padding: 0 20px 30px; flex: 1;">
+
+              <div class="blog-meta" style="margin-bottom: 20px;" data-blog-modal-meta>
+              </div>
+
+              <h2 class="h2" data-blog-modal-title style="margin-bottom: 20px; color: var(--white-2);"></h2>
+
+              <div data-blog-modal-text style="color: var(--light-gray); line-height: 1.8; font-size: var(--fs-6);">
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+        <!-- Blog content templates (hidden) -->
+        <div style="display: none;" data-blog-content="toon">
+          <div class="blog-meta" style="margin-bottom: 20px;">
+            <p class="blog-category">AI Development</p>
+            <span class="dot"></span>
+            <time datetime="2024-12-15">December 15, 2024</time>
+          </div>
+          <h2 class="h2" style="margin-bottom: 20px; color: var(--white-2);">TOON for LLMs Instead of JSON But Better</h2>
+          <div style="color: var(--light-gray); line-height: 1.8; font-size: var(--fs-6);">
+            <p style="margin-bottom: 20px; font-size: var(--fs-5);">
+              JSON works for structured data, but it falls short with large language models. TOON offers a cleaner approach that models parse more reliably and developers find easier to work with.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">The Problem with JSON</h3>
+            <p style="margin-bottom: 20px;">
+              When you ask an LLM to return structured data in JSON, you face parsing issues. Models sometimes add extra text, forget closing braces, or generate invalid syntax. These errors break your application flow and require extra validation layers.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">What TOON Does Differently</h3>
+            <p style="margin-bottom: 20px;">
+              TOON uses a format that aligns with how language models generate text. It's more forgiving of minor formatting issues and easier for models to produce correctly. The syntax is simpler than JSON, which means fewer parsing errors and less code to handle edge cases.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">Real-World Benefits</h3>
+            <p style="margin-bottom: 20px;">
+              Developers report fewer parsing failures when using TOON. Models generate valid TOON more consistently than JSON. The format also reads better in prompts, making it easier to explain what you want from the model.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">When to Use TOON</h3>
+            <p style="margin-bottom: 20px;">
+              Use TOON when you need structured output from LLMs but want to avoid JSON parsing headaches. It works well for configuration generation, data extraction, and any scenario where you need reliable structured responses from language models.
+            </p>
+            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--jet); color: var(--light-gray-70); font-size: var(--fs-7);">
+              TOON represents a practical shift toward formats that match how language models actually work, rather than forcing them into formats designed for machines.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: none;" data-blog-content="dbos">
+          <div class="blog-meta" style="margin-bottom: 20px;">
+            <p class="blog-category">Backend Development</p>
+            <span class="dot"></span>
+            <time datetime="2025-02-14">February 14, 2025</time>
+          </div>
+          <h2 class="h2" style="margin-bottom: 20px; color: var(--white-2);">Making Java Workflows Durable with DBOS Transact</h2>
+          <div style="color: var(--light-gray); line-height: 1.8; font-size: var(--fs-6);">
+            <p style="margin-bottom: 20px; font-size: var(--fs-5);">
+              DBOS Transact helps Java developers build long-running workflows that stay reliable, even when servers restart or fail. It uses Postgres to track progress so your code continues from where it stopped.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">Why Durable Workflows Matter</h3>
+            <p style="margin-bottom: 20px;">
+              Many backend tasks run for hours or wait for external signals. Without durability, you risk losing work when the process dies. You then add your own retry logic, state tracking, and cleanup code, which can grow complex fast. DBOS simplifies this by handling durability for you.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">What DBOS Transact Does</h3>
+            <p style="margin-bottom: 20px;">
+              DBOS stores workflow steps in Postgres as checkpoints. When your program restarts, DBOS resumes the workflow from the last saved step. You write normal Java code, and DBOS makes it reliable without extra infrastructure.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">How It Works in Code</h3>
+            <p style="margin-bottom: 20px;">
+              You mark a workflow method and split the logic into steps:
+            </p>
+            <pre style="margin-bottom: 20px; background: var(--jet); padding: 15px; border-radius: 8px; overflow-x: auto; font-size: var(--fs-7);"><code>public class ExampleWorkflow {
+    
+    @Workflow
+    public void runWorkflow() {
+        DBOS.runStep(() -> stepOne(), "stepOne");
+        DBOS.runStep(() -> stepTwo(), "stepTwo");
+    }
+    
+    private void stepOne() {
+        System.out.println("Step one done");
+    }
+    
+    private void stepTwo() {
+        System.out.println("Step two done");
+    }
+}</code></pre>
+            <p style="margin-bottom: 20px;">
+              Each step is saved after completion. If the app dies after running step one, DBOS resumes at step two when the app comes back.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">Strengths and Tradeoffs</h3>
+            <p style="margin-bottom: 20px;">
+              DBOS works well when you want reliability without adding a full workflow engine. It depends on Postgres, so you need good database operations. It also gives you more control, which means you manage how workflows evolve over time.
+            </p>
+            <h3 class="h3" style="margin-top: 30px; margin-bottom: 15px; color: var(--white-2);">When to Use DBOS Transact</h3>
+            <p style="margin-bottom: 20px;">
+              DBOS fits tasks like payment pipelines, long-running AI agents, scheduled jobs, and any work that must survive system failures. It keeps the code clean and avoids extra infrastructure.
+            </p>
+            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--jet); color: var(--light-gray-70); font-size: var(--fs-7);">
+              DBOS Transact offers a direct way to make Java workflows durable, without the weight of a full orchestrator.
+            </p>
+          </div>
+        </div>
+
       </article>
-
-
 
 
 

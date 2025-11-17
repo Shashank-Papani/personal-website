@@ -316,12 +316,12 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 200px;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 490px; }
 
 .sidebar-info {
   position: relative;
@@ -522,6 +522,26 @@ main {
   gap: 20px;
 }
 
+.service-list-collapsible {
+  max-height: 2000px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.service-list-collapsible.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+[data-service-icon].rotated {
+  transform: rotate(180deg);
+}
+
 .service-item {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -672,6 +692,29 @@ main {
 .modal-container.active .testimonials-modal {
   transform: scale(1);
   opacity: 1;
+}
+
+.blog-modal {
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-modal-banner {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  margin: -30px -30px 25px -30px;
+  order: -1;
+}
+
+.blog-modal-content {
+  padding-top: 0;
+  flex: 1;
 }
 
 .modal-close-btn {
@@ -1329,11 +1372,11 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 260px;
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 660px; }
 
   .sidebar-info { gap: 25px; }
 

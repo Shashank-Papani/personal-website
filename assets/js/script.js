@@ -136,6 +136,89 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
+// service section toggle
+const serviceToggle = document.querySelector("[data-service-toggle]");
+const serviceList = document.querySelector("[data-service-list]");
+const serviceIcon = document.querySelector("[data-service-icon]");
+
+if (serviceToggle && serviceList) {
+  serviceList.classList.add("collapsed"); // Start collapsed
+  serviceToggle.addEventListener("click", function () {
+    serviceList.classList.toggle("collapsed");
+    if (serviceIcon) {
+      serviceIcon.classList.toggle("rotated");
+    }
+  });
+}
+
+// blog modal variables
+const blogItems = document.querySelectorAll("[data-blog-item]");
+const blogModalContainer = document.querySelector("[data-blog-modal-container]");
+const blogModalCloseBtn = document.querySelector("[data-blog-modal-close-btn]");
+const blogOverlay = document.querySelector("[data-blog-overlay]");
+const blogModalImg = document.querySelector("[data-blog-modal-img]");
+const blogModalTitle = document.querySelector("[data-blog-modal-title]");
+const blogModalMeta = document.querySelector("[data-blog-modal-meta]");
+const blogModalText = document.querySelector("[data-blog-modal-text]");
+
+// blog modal toggle function
+const blogModalFunc = function () {
+  blogModalContainer.classList.toggle("active");
+  blogOverlay.classList.toggle("active");
+}
+
+// add click event to all blog items
+blogItems.forEach(function(blogItem) {
+  blogItem.addEventListener("click", function (e) {
+    e.preventDefault();
+    
+    // Get the blog ID from the clicked item
+    const blogId = this.getAttribute("data-blog-id");
+    
+    // Get the image, title, and text from the clicked blog item
+    const blogImg = this.querySelector("[data-blog-img]");
+    const blogTitle = this.querySelector("[data-blog-title]");
+    
+    // Get the content template for this blog post
+    const blogContentTemplate = document.querySelector(`[data-blog-content="${blogId}"]`);
+    
+    if (blogContentTemplate) {
+      // Update modal image
+      if (blogModalImg && blogImg) {
+        blogModalImg.src = blogImg.src;
+        blogModalImg.alt = blogImg.alt;
+      }
+      
+      // Update modal content from template
+      const templateMeta = blogContentTemplate.querySelector(".blog-meta");
+      const templateTitle = blogContentTemplate.querySelector("h2");
+      const templateText = blogContentTemplate.querySelector("div[style*='color: var(--light-gray)']");
+      
+      if (blogModalMeta && templateMeta) {
+        blogModalMeta.innerHTML = templateMeta.innerHTML;
+      }
+      
+      if (blogModalTitle && templateTitle) {
+        blogModalTitle.textContent = templateTitle.textContent;
+      }
+      
+      if (blogModalText && templateText) {
+        blogModalText.innerHTML = templateText.innerHTML;
+      }
+    }
+    
+    blogModalFunc();
+  });
+});
+
+// add click event to blog modal close button
+if (blogModalCloseBtn) {
+  blogModalCloseBtn.addEventListener("click", blogModalFunc);
+}
+if (blogOverlay) {
+  blogOverlay.addEventListener("click", blogModalFunc);
+}
+
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
