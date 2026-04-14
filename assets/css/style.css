@@ -879,15 +879,21 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
-
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skills-item .h5 {
-  margin: 0;
-  font-weight: var(--fw-500);
+.skills-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 20px;
 }
+
+.skills-split__heading {
+  color: var(--white-2);
+  margin: 0 0 12px;
+  font-weight: var(--fw-500);
+  text-transform: none;
+}
+
+.skills-split__col .timeline-text { margin-bottom: 0; }
 
 
 
@@ -1370,6 +1376,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     height: 5px;
   }
 
+  .skills-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
   .icon-box {
     width: 48px;
     height: 48px;
@@ -1563,10 +1574,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 8px;
     left: -43px;
   }
-
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
-
-
 
   /**
    * #PORTFOLIO, BLOG
