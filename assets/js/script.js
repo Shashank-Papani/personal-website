@@ -219,6 +219,55 @@ if (blogOverlay) {
   blogOverlay.addEventListener("click", blogModalFunc);
 }
 
+// portfolio project image preview (full-size)
+const projectPreviewModal = document.querySelector("[data-project-preview-modal]");
+const projectPreviewOverlay = document.querySelector("[data-project-preview-overlay]");
+const projectPreviewClose = document.querySelector("[data-project-preview-close]");
+const projectPreviewImg = document.querySelector("[data-project-preview-img]");
+const projectPreviewTriggers = document.querySelectorAll("[data-project-preview]");
+
+const openProjectPreviewModal = function (src, alt) {
+  if (!projectPreviewModal || !projectPreviewOverlay || !projectPreviewImg) { return; }
+  projectPreviewImg.src = src;
+  projectPreviewImg.alt = alt || "";
+  projectPreviewModal.classList.add("active");
+  projectPreviewOverlay.classList.add("active");
+};
+
+const closeProjectPreviewModal = function () {
+  if (!projectPreviewModal || !projectPreviewOverlay) { return; }
+  projectPreviewModal.classList.remove("active");
+  projectPreviewOverlay.classList.remove("active");
+};
+
+projectPreviewTriggers.forEach(function (fig) {
+  const activate = function () {
+    const img = fig.querySelector("img");
+    if (!img || !img.src) { return; }
+    openProjectPreviewModal(img.currentSrc || img.src, img.alt);
+  };
+  fig.addEventListener("click", activate);
+  fig.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      activate();
+    }
+  });
+});
+
+if (projectPreviewClose) {
+  projectPreviewClose.addEventListener("click", closeProjectPreviewModal);
+}
+if (projectPreviewOverlay) {
+  projectPreviewOverlay.addEventListener("click", closeProjectPreviewModal);
+}
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && projectPreviewModal && projectPreviewModal.classList.contains("active")) {
+    closeProjectPreviewModal();
+  }
+});
+
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");

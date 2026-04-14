@@ -1047,7 +1047,51 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: var(--transition-1);
+}
+
+/* Wide marketing heroes: show full width without side crop */
+.project-img.project-img--contain img {
+  object-fit: contain;
+  object-position: center top;
+}
+
+.project-img[data-project-preview] {
+  cursor: pointer;
+}
+
+.project-img[data-project-preview]:focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 2px;
+}
+
+.project-preview-modal {
+  max-width: min(96vw, 1200px);
+  max-height: 92vh;
+  padding: 20px;
+  margin: 20px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-preview-modal__figure {
+  margin: 36px 0 0;
+  max-width: 100%;
+  max-height: calc(92vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-preview-modal__figure img {
+  max-width: 100%;
+  max-height: calc(92vh - 100px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .project-item > a:hover img { transform: scale(1.1); }
